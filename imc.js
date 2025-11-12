@@ -2,11 +2,16 @@ const calcular = document.getElementById("calcular");
 
 function imc() {
     const nome = document.getElementById("nome").value;
-    const altura = parseFloat(document.getElementById("altura").value);
+    let altura = parseFloat(document.getElementById("altura").value);
     const peso = parseFloat(document.getElementById("peso").value);
     const resultado = document.getElementById("resultado");
 
     if (nome !== "" && !isNaN(altura) && !isNaN(peso) && altura > 0 && peso > 0) { 
+        // Converte altura para metros se for digitada em centímetros
+        if (altura > 3) {
+            altura = altura / 100;
+        }
+        
         const valorIMC = peso / (altura * altura);
         let classificacao = "";
         let emoji = "";
