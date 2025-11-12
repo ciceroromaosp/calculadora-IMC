@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC - Índice de Massa Corporal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="header">
+                <i class="fas fa-heartbeat icon-header"></i>
+                <h1 class="titles">Calculadora de IMC</h1>
+                <p class="subtitle">Descubra seu Índice de Massa Corporal</p>
+            </div>
+            
+            <div class="form-container">
+                <div class="input-group">
+                    <label><i class="fas fa-user"></i> Nome</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                
+                <div class="input-group">
+                    <label><i class="fas fa-ruler-vertical"></i> Altura (m)</label>
+                    <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01">
+                </div>
+                
+                <div class="input-group">
+                    <label><i class="fas fa-weight"></i> Peso (kg)</label>
+                    <input type="number" id="peso" placeholder="Ex: 70" step="0.1">
+                </div>
+                
+                <button id="calcular">
+                    <i class="fas fa-calculator"></i>
+                    Calcular IMC
+                </button>
+            </div>
+
+            <div class="result" id="resultado"></div>
+            
+            <div class="info-table">
+                <h3>Tabela de Classificação</h3>
+                <div class="table-item below">
+                    <span>Abaixo de 18,5</span>
+                    <span>Abaixo do peso</span>
+                </div>
+                <div class="table-item normal">
+                    <span>18,5 - 24,9</span>
+                    <span>Peso normal</span>
+                </div>
+                <div class="table-item overweight">
+                    <span>25,0 - 29,9</span>
+                    <span>Sobrepeso</span>
+                </div>
+                <div class="table-item obese">
+                    <span>Acima de 30,0</span>
+                    <span>Obesidade</span>
+                </div>
+            </div>
+        </div>
+    </main> 
+    <script src="./imc.js"></script>
+</body>
+</html>
